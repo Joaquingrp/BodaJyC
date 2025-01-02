@@ -138,3 +138,13 @@ h1, h2 {
 .carousel img.active {
     opacity: 1;
 }
+a {
+    color: #000000; /* Negro normal */
+    text-decoration: underline; /* Subraya el texto */
+}
+
+/* Enlaces cuando el mouse pasa por encima (hover) */
+a:hover {
+    font-weight: bold; /* Hace el texto negrita */
+    text-decoration: underline; /* Subraya el texto */
+}
