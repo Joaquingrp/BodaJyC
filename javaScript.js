@@ -15,4 +15,12 @@ document.addEventListener("DOMContentLoaded", () => {
             images[index].classList.add("active");
         }, 4000);
     });
+
+    // Lógica para el menú desplegable
+    const menuIcon = document.querySelector(".menu-icon");
+    const menu = document.querySelector(".menu");
+
+    menuIcon.addEventListener("click", () => {
+        menu.classList.toggle("active");
+    });
 });
