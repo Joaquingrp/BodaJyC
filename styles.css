@@ -8,6 +8,80 @@ body {
     text-align: center;
 }
 
+/* Menú de navegación */
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0); /* Fondo negro transparente */
+    color: white;
+}
+
+.navbar .logo {
+    font-size: 1.3em;
+    font-weight: serif;
+    color: white;
+}
+
+.navbar .menu {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar .menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.navbar .menu a:hover {
+    color: #fffdea; /* Dorado al pasar el mouse */
+}
+
+/* Menú desplegable para móvil */
+.navbar .menu-icon {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.navbar .menu {
+    display: flex;
+}
+
+@media only screen and (max-width: 767px) {
+    .navbar .menu {
+        display: none;
+        flex-direction: column;
+        background: rgb(16, 28, 36);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .navbar .menu a {
+        padding: 10px 0;
+    }
+
+    .navbar .menu.active {
+        display: flex;
+    }
+
+    .navbar .menu-icon {
+        display: block;
+        color: white;
+    }
+}
+
 h1, h2 {
     font-family: 'Century Schoolbook', serif;
     font-weight: 400;
@@ -28,7 +102,7 @@ h1, h2 {
 .ceremonia,
 .convite,
 .ayudanos {
-    padding: 50px 20px; /* Espaciado ajustado */
+    padding: 40px 20px; /* Espaciado ajustado */
     margin-bottom: 30px; /* Espaciado homogéneo entre secciones */
 }
 
@@ -138,6 +212,7 @@ h1, h2 {
 .carousel img.active {
     opacity: 1;
 }
+
 a {
     color: #000000; /* Negro normal */
     text-decoration: underline; /* Subraya el texto */
