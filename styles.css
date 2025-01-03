@@ -18,7 +18,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 11px 21px;
     background: rgba(0, 0, 0, 0); /* Fondo negro transparente */
     color: white;
 }
@@ -65,7 +65,7 @@ body {
         top: 100%;
         left: 0;
         width: 100%;
-        padding: 10px;
+        padding: 0px;
     }
 
     .navbar .menu a {
