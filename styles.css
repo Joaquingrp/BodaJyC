@@ -2,7 +2,7 @@
 body {
     font-family: 'Century Schoolbook', serif;
     color: #333;
-    background-color: #f9f6f1;
+    background-color: #fffcf6;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -18,7 +18,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 11px 21px;
+    padding: 11px 20px;
     background: rgba(0, 0, 0, 0); /* Fondo negro transparente */
     color: white;
 }
@@ -65,7 +65,7 @@ body {
         top: 100%;
         left: 0;
         width: 100%;
-        padding: -5px;
+        padding: 0px;
     }
 
     .navbar .menu a {
@@ -82,9 +82,16 @@ body {
     }
 }
 
-h1, h2 {
+h1{
     font-family: 'Century Schoolbook', serif;
-    font-weight: 400;
+    font-weight: 500;
+    font-size: 28px;
+}
+
+h2 {
+    font-family: 'Century Schoolbook', serif;
+    font-weight: 50;
+    font-size: 21px;
 }
 
 .hero {
