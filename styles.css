@@ -1,6 +1,6 @@
 /* Estilo general */
 body {
-    font-family: 'Century Schoolbook', serif;
+    font-family: 'Playfair Display', serif;
     color: #333;
     background-color: #fffcf6;
     margin: 0;
@@ -83,13 +83,13 @@ body {
 }
 
 h1{
-    font-family: 'Century Schoolbook', serif;
+    font-family: 'Playfair Display', serif;
     font-weight: 500;
     font-size: 28px;
 }
 
 h2 {
-    font-family: 'Century Schoolbook', serif;
+    font-family: 'Playfair Display', serif;
     font-weight: 50;
     font-size: 21px;
 }
