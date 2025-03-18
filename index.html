@@ -90,7 +90,7 @@
     <div id="formulario-container">
         <iframe id="formulario-iframe"
             src="https://docs.google.com/forms/d/e/1FAIpQLSePnPh9WG_MaVixULVXSOwYL5FjgkV34Kny7K4vf__I8puLuA/viewform?embedded=true"
-            frameborder="0" marginheight="0" marginwidth="0" allowfullscreen loading="lazy"
+            frameborder="0" marginheight="0" marginwidth="0" allowfullscreen
             width="100%" height="600px">
         </iframe>
     </div>
@@ -98,10 +98,25 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-    setTimeout(() => {
     let iframe = document.getElementById("formulario-iframe");
-    iframe.src = iframe.src + "&timestamp=" + new Date().getTime(); // Añadir un parámetro único
-}, 2000);
+    let loaded = false;
+    
+    // Si el iframe carga correctamente, marcamos loaded como true.
+    iframe.addEventListener("load", function() {
+        loaded = true;
+    });
+    
+    // Si después de 2 segundos no se ha cargado, se recarga una única vez.
+    setTimeout(() => {
+        if (!loaded) {
+            // Limpiar cualquier parámetro timestamp previo.
+            let baseSrc = iframe.src.split("&timestamp=")[0];
+            iframe.src = baseSrc + "&timestamp=" + new Date().getTime();
+        }
+    }, 1500);
+});
+</script>
+
 
 });
 </script>
