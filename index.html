@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quino y Carlota - 14.06.2025</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Century+Schoolbook:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -76,7 +77,7 @@
             <div class="texto-ayudanos">
                 <h1>Km 0 ¡Empezamos!</h1>
                 <p>Si quieres ayudarnos a construir nuestro hogar, formar una familia y ser partícipe de nuestras próximas aventuras. Te dejamos nuestro número de cuenta.</p>
-                <p>ES20 1465 0100 9820 6203 7452</p>
+                <p>ES11 xx xxx xxx xxx</p>
             </div>
         </div>
     </section>
@@ -86,9 +87,25 @@
     <h1>Confirma tu asistencia</h1>
     <p>Por favor, completa el formulario para confirmar tu asistencia a nuestra boda.</p>
     <p>Si la encuesta no carga, por favor, refresca la página.</p>
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSePnPh9WG_MaVixULVXSOwYL5FjgkV34Kny7K4vf__I8puLuA/viewform?embedded=true"
-            frameborder="0" marginheight="0" marginwidth="0" allowfullscreen loading="lazy"></iframe>
+    <div id="formulario-container">
+        <iframe id="formulario-iframe"
+            src="https://docs.google.com/forms/d/e/1FAIpQLSePnPh9WG_MaVixULVXSOwYL5FjgkV34Kny7K4vf__I8puLuA/viewform?embedded=true"
+            frameborder="0" marginheight="0" marginwidth="0" allowfullscreen loading="lazy"
+            width="100%" height="600px">
+        </iframe>
+    </div>
 </section>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(() => {
+    let iframe = document.getElementById("formulario-iframe");
+    iframe.src = iframe.src + "&timestamp=" + new Date().getTime(); // Añadir un parámetro único
+}, 1000);
+
+});
+</script>
+
 
     <!-- Archivo de JavaScript -->
     <script src="javaScript.js"></script>
