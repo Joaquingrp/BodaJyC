@@ -6,6 +6,7 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
+    font-size: 17px;
 }
 
 /* Menú de navegación */
@@ -85,13 +86,13 @@ body {
 h1{
     font-family: 'Playfair Display', serif;
     font-weight: 500;
-    font-size: 28px;
+    font-size: 30px;
 }
 
 h2 {
     font-family: 'Playfair Display', serif;
     font-weight: 50;
-    font-size: 21px;
+    font-size: 24px;
 }
 
 .hero {
