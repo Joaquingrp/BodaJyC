@@ -106,17 +106,17 @@ h2 {
     object-fit: cover;
 }
 
-/* Ceremonia, Convite y Ayudanos */
+/* Ceremonia, Convite y Km 0 */
 .ceremonia,
 .convite,
-.ayudanos {
+.Km0 {
     padding: 40px 20px; /* Espaciado ajustado */
     margin-bottom: 30px; /* Espaciado homogéneo entre secciones */
 }
 
 .ceremonia-contenido,
 .convite-contenido,
-.ayudanos-contenido {
+.Km0-contenido {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -126,7 +126,7 @@ h2 {
 
 .img-ceremonia,
 .img-convite,
-.img-ayudanos {
+.img-Km0 {
     width: 100%;
     max-width: 600px;
     border-radius: 10px;
@@ -135,7 +135,7 @@ h2 {
 }
 
 /* Textos */
-.texto-ceremonia, .texto-convite, .texto-ayudanos {
+.texto-ceremonia, .texto-convite, .texto-Km0 {
     max-width: 600px;
     text-align: left;
 }
@@ -157,7 +157,7 @@ h2 {
 
 /* Distribución escritorio */
 @media only screen and (min-width: 768px) {
-    .ceremonia-contenido, .ayudanos-contenido {
+    .ceremonia-contenido, .Km0-contenido {
         flex-direction: row; /* Imagen izquierda, texto derecha */
     }
 
@@ -169,7 +169,7 @@ h2 {
 /* Distribución móvil */
 @media only screen and (max-width: 767px) {
     .ceremonia-contenido,
-    .ayudanos-contenido {
+    .Km0-contenido {
         flex-direction: column-reverse; /* Imagen primero, texto después */
     }
 
@@ -179,14 +179,14 @@ h2 {
 
     .img-ceremonia,
     .img-convite,
-    .img-ayudanos {
+    .img-Km0 {
         width: 100%;
         margin: 20px 0; /* Espaciado entre imagen y texto */
     }
 
     .texto-ceremonia,
     .texto-convite,
-    .texto-ayudanos {
+    .texto-Km0 {
         text-align: center;
     }
 
