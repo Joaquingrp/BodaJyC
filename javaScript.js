@@ -41,21 +41,13 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
 
-        // Recargar el formulario solo cuando se pase de #Km 0 a #cuestionario una única vez
-        if (lastSection === "Km0" && currentSection === "cuestionario" && !hasReloaded) {
-            let iframe = document.getElementById("formulario-iframe");
-            if (iframe) {
-                iframe.src = iframe.src; // Recarga el iframe
-                hasReloaded = true; // Evita futuras recargas
-            }
-        }
-
-        // Permitir recargar nuevamente si el usuario regresa a #Km 0
-        if (currentSection === "Km0") {
-            hasReloaded = false;
-        }
-
-        lastSection = currentSection;
-    });
-
+  // Recargar el formulario solo una vez al llegar a #cuestionario
+  if (currentSection === "cuestionario" && !hasReloaded) {
+    let iframe = document.getElementById("formulario-iframe");
+    if (iframe) {
+        iframe.src = iframe.src; // Recarga el iframe
+        hasReloaded = true; // Evita futuras recargas
+    }
+}
+});
 
