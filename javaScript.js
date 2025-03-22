@@ -24,3 +24,37 @@ document.addEventListener("DOMContentLoaded", () => {
         menu.classList.toggle("active");
     });
 });
+
+       // Detectar la sección visible y actualizar la URL
+       document.addEventListener("scroll", () => {
+        const sections = document.querySelectorAll("section");
+        let scrollPosition = window.scrollY + window.innerHeight / 2;
+        let currentSection = "";
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+
+            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                currentSection = section.getAttribute("id");
+                history.replaceState(null, null, `#${currentSection}`);
+            }
+        });
+
+        // Recargar el formulario solo cuando se pase de #Km 0 a #cuestionario una única vez
+        if (lastSection === "Km0" && currentSection === "cuestionario" && !hasReloaded) {
+            let iframe = document.getElementById("formulario-iframe");
+            if (iframe) {
+                iframe.src = iframe.src; // Recarga el iframe
+                hasReloaded = true; // Evita futuras recargas
+            }
+        }
+
+        // Permitir recargar nuevamente si el usuario regresa a #Km 0
+        if (currentSection === "Km0") {
+            hasReloaded = false;
+        }
+
+        lastSection = currentSection;
+    });
+
