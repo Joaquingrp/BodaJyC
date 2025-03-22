@@ -41,20 +41,20 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
 
-        // Recargar el formulario solo cuando se pase de #Km 0 a #cuestionario una única vez
+        // Detectar cambio de Km0 a cuestionario
         if (lastSection === "Km0" && currentSection === "cuestionario" && !hasReloaded) {
             let iframe = document.getElementById("formulario-iframe");
             if (iframe) {
-                iframe.src = iframe.src; // Recarga el iframe
-                hasReloaded = true; // Evita futuras recargas
+                iframe.src = iframe.src; // Recarga el formulario
+                hasReloaded = true; // Evita futuras recargas hasta volver a Km0
             }
         }
 
-        // Permitir recargar nuevamente si el usuario regresa a #Km 0
-        if (currentSection === "Km0") {
+        // Restablecer la recarga si el usuario regresa a Km0
+        if (currentSection === "Km0" && lastSection !== "Km0") {
             hasReloaded = false;
         }
 
-        lastSection = currentSection;
+        lastSection = currentSection; // Guardamos la sección actual
     });
 
